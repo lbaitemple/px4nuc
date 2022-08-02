@@ -120,10 +120,7 @@ wget_return_code=$?
 if [[ $wget_return_code -ne 0 ]]; then echo "Error downloading 'install_geographiclib_datasets.sh'. Sorry but I cannot proceed further :("; exit 1; fi
 # Otherwise source the downloaded script.
 sudo bash -c "$install_geo"
-pip3 install kconfiglib
-pip3 install --user jsonschema
-pip3 install --user pyros-genmsg
-pip3 install --user packaging
+
 
 ## Build!
 catkin build
@@ -135,3 +132,4 @@ eval $catkin_ws_source
 
 cd ~
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
