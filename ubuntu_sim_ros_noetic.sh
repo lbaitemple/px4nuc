@@ -120,6 +120,7 @@ wget_return_code=$?
 if [[ $wget_return_code -ne 0 ]]; then echo "Error downloading 'install_geographiclib_datasets.sh'. Sorry but I cannot proceed further :("; exit 1; fi
 # Otherwise source the downloaded script.
 sudo bash -c "$install_geo"
+pip3 install kconfiglib
 
 ## Build!
 catkin build
