@@ -128,3 +128,6 @@ catkin_ws_source="source ~/catkin_ws/devel/setup.bash"
 if grep -Fxq "$catkin_ws_source" ~/.bashrc; then echo ROS catkin_ws setup.bash already in .bashrc; 
 else echo "$catkin_ws_source" >> ~/.bashrc; fi
 eval $catkin_ws_source
+
+cd ~
+git clone https://github.com/PX4/PX4-Autopilot.git --recursive
